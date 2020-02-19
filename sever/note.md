@@ -1,5 +1,5 @@
 
-https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/
+
 
 // const connection = mysql.createConnection({
 //   host     : 'localhost',
@@ -22,21 +22,3 @@ https://www.sitepoint.com/javascript-command-line-interface-cli-node-js/
 //   });
 // }
 
-inquirer
-  .prompt([{
-
-    type: "list",
-    name: "Options",
-    message: "What would you like to do ?",
-    choices: [ 
-      "View all employees ?",
-      "View all departments ?",
-      "View all roles ?",
-      "Input employee ?",
-      "Input department ?",
-      "Input roles ?",
-      "Delete employee ?",
-      "Delete employee ?", 
-    ]
-  }   
-  ])

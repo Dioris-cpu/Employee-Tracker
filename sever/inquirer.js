@@ -5,19 +5,20 @@ module.exports = {
       {
         name: "Employee",
         type: "input",
-        message: "Please Enter the first name or last name :",
+        message: "Enter the name of the employee that you wish to add:",
         validate: function(value) {
           if (value.length) {
             return true;
           } else {
-            return "Please Enter the first name or last name";
+            return "Enter the name of the employee that you wish to add";
           }
         }
       },
       {
         name: "role",
-        type: "input",
+        type: "list",
         message: "Enter there role:",
+        choices: ["Manager", "Engineer", "Intern"],
         validate: function(value) {
           if (value.length) {
             return true;
@@ -28,8 +29,9 @@ module.exports = {
       },
       {
         name: "department",
-        type: "input",
+        type: "list",
         message: "Enter there department:",
+        choices: ["Marketing","Research and Development", "HR"],
         validate: function(value) {
           if (value.length) {
             return true;
