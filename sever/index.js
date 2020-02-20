@@ -11,7 +11,7 @@ clear();
 
 console.log(
   chalk.red(
-    figlet.textSync('TRACKER', { horizontalLayout: 'full' })
+    figlet.textSync('MANAGER', { standardLayout: 'full' })
   )
 );
 

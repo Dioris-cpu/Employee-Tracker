@@ -31,7 +31,7 @@ module.exports = {
         name: "department",
         type: "list",
         message: "Enter there department:",
-        choices: ["Marketing","Research and Development", "HR"],
+        choices: ["Marketing","Research and Development", "HR","Production"],
         validate: function(value) {
           if (value.length) {
             return true;

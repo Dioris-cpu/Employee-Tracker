@@ -24,3 +24,12 @@ title VARCHAR(30),
 salary DECIMAL,
 department_id INT    
 );
+
+INSERT INTO employees.employee (first_name, last_name)
+VALUE ( "Dioris", "Diaz" )
+
+INSERT INTO employees.department (id, name)
+value ( 1, "Marketing")
+
+INSERT INTO employees.role (id, title, salary ,department_id)
+value ( 1 , "Engineer", 100050, 1)
