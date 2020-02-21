@@ -12,10 +12,10 @@ CREATE TABLE employee (
 );
 
 
--- CREATE TABLE department (
--- id INT PRIMARY KEY,
--- name VARCHAR(30) 
--- );
+CREATE TABLE department (
+id INT PRIMARY KEY,
+name VARCHAR(30) 
+);
 
 -- CREATE TABLE role (
 --  id INT PRIMARY KEY,
