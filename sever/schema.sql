@@ -17,12 +17,12 @@ id INT PRIMARY KEY,
 name VARCHAR(30) 
 );
 
--- CREATE TABLE role (
---  id INT PRIMARY KEY,
--- title VARCHAR(30), 
--- salary DECIMAL,
--- department_id INT    
--- );
+CREATE TABLE role (
+ id INT PRIMARY KEY,
+title VARCHAR(30), 
+salary DECIMAL,
+department_id INT    
+);
 
 INSERT INTO employees_db.employee(first_name, last_name)
 VALUES ("Dioris", "Diaz");
