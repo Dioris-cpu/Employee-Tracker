@@ -2,6 +2,7 @@ DROP DATABASE IF EXISTS employees_db;
 CREATE DATABASE employees_db;
 
 USE employees_db;
+-- DROP TABLE IF EXISTS employee, departmenet, role;
 
 CREATE TABLE employee (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -24,8 +25,7 @@ salary DECIMAL,
 department_id INT    
 );
 
-INSERT INTO employees_db.employee(first_name, last_name)
-VALUES ("Dioris", "Diaz");
+
 
 -- INSERT INTO employees_db.department (id, name)
 -- VALUES ( 1, "Marketing")

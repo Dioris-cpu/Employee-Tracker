@@ -4,13 +4,6 @@ const clear = require("clear");
 const figlet = require("figlet");
 const connection = require("./connection");
 
-// const first_name = require('./inquirer')
-// const role_id = require('./inquirer')
-// const manager_id = require('./inquirer')
-
-// use inquirer to prompt the user with the questions
-// 'view all employees'
-// connect to the database, and run a select statement for all employees, then use console table to print the results back
 
 clear();
 
@@ -39,7 +32,7 @@ const run = async () => {
     console.table(department);
   } else if (options === "add role" ) {
     const { role_id, role_title, role_salary, department_id }  = await inquirer.addRoles(); 
-    const sql3 = `INSERT INTO role (id, title, salary) VALUES ('${role_id}','${role_title}','${role_salary}','${department_id}')`;
+    const sql3 = `INSERT INTO role (id, title, salary, department_id) VALUES ('${role_id}','${role_title}','${role_salary}','${department_id}')`;
     console.table(sql3); const newRole = await connection.query(sql3);
     const role = await connection.query("SELECT * FROM role");
     console.table(role);
