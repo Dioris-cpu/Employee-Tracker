@@ -18,11 +18,21 @@ const run = async () => {
 
   if (options === "add employee") {
     const { first_name, last_name, role_id, manager_id } = await inquirer.addEmployee();
-  const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ('${first_name}','${last_name}', '${role_id}', '${manager_id}')`;
-  const newEmployee = connection.query(sql);
-  console.table(sql);
-   const employees = await connection.query("SELECT * FROM employee");
-  console.table(employees);
+    const sql = `INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES ('${first_name}','${last_name}', '${role_id}', '${manager_id}')`;
+    const newEmployee = connection.query(sql);
+    console.table(sql);
+    const employees = await connection.query("SELECT * FROM employee");
+    console.table(employees);
+  } else if (options === "update employee role") {
+    const { employee_id: employee_id, role_id: role_id } = await inquirer.updateEmployeeRole();
+    
+    console.log(employee_id);
+    console.log(role_id);
+    
+    const sql = `UPDATE employee SET role_id='${role_id}' WHERE id='${employee_id}'`
+    connection.query(sql);
+    const employees = await connection.query("SELECT * FROM employee");
+    console.table(employees);
   } else if (options === "add department") {
     // console.table("returned from addDept", await inquirer.addDepartment())
     const { name: department_name, id: department_id }  = await inquirer.addDepartment();

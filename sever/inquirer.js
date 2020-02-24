@@ -7,7 +7,24 @@ module.exports = {
         name: "options",
         type: "list",
         message: "what would you like to do?:",
-        choices: ["add employee", "add department", "add role"]
+        choices: ["add employee", "add department", "add role","update employee role"]
+      }
+    ];
+    return inquirer.prompt(questions);
+  },
+  updateEmployeeRole: () => {
+    
+    const questions = [
+      {
+        name: "employee_id",
+        type: "input",
+        message: "What is the id of the employee that you wish to update ?:"
+      },
+      {
+        name: "role_id",
+        type: "list",
+        message: "What is the role that you which to update ?:",
+        choices:[1, 2, 3]
       }
     ];
     return inquirer.prompt(questions);
