@@ -17,8 +17,10 @@ module.exports = {
     const questions = [
       {
         name: "employee_id",
-        type: "input",
-        message: "What is the id of the employee that you wish to update ?:"
+        type: "list",
+        message: "What is the id of the employee that you wish to update ?:",
+        choices: [21,22,23,24,25,26,27,28,29,30]
+        
       },
       {
         name: "role_id",
